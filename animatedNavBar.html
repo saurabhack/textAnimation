@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800;900&display=swap');
+
+        :root {
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #000000;
+}
+*{
+            margin:0px;
+            padding: 0px;
+        }
+        .navbar{
+            height: 10vh;
+            width:100vw;
+            display: flex;
+            box-shadow: 2px 2px 5px gray;
+        }
+        .logo{
+            height:100%;
+            width:30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .lists{
+            height: 100%;
+            width: 40%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .lists ul li{
+            list-style: none;
+
+        }
+        .icons{
+            height: 100%;
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap:30px;
+        }
+        .lists p:hover{
+            border-bottom: 3px  solid black;
+            transition: all ease 0s;
+            cursor: pointer;
+        }
+
+        .text-animate h3 {
+    animation: homeBgText 6s linear infinite;
+    animation-delay: 2s;
+}
+.text-animate h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-right: 2px solid var(--main-color);
+    z-index: -1;
+}
+.text-animate h3::before {
+    animation: homeCursorText 6s linear infinite;
+    animation-delay: 2s;
+}
+.text-animate {
+    position: relative;
+    width: 32.8rem;
+}
+.text-animate h3 {
+    /* change here */
+    font-size: 3.05rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: .7px var(--main-color);
+    background-image: linear-gradient(var(--main-color), var(--main-color));
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -33rem 0;
+}
+.main{
+    
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom:-200px;
+}
+@keyframes homeBgText {
+
+0%,
+10%,
+100% {
+    background-position: -33rem 0;
+}
+
+65%,
+85% {
+    background-position: 0 0;
+}
+}
+@keyframes homeCursorText {
+
+0%,
+10%,
+100% {
+    width: 0;
+}
+
+65%,
+78%,
+85% {
+    width: 100%;
+    opacity: 1;
+}
+
+75%,
+81% {
+    opacity: 0;
+}
+}
+
+    </style>
+    
+</head>
+<body> 
+    <nav class="navbar">
+        <div class="logo"><h1>Felix</h1></div>
+        <div class="lists">
+                <p>Home</p>
+                <p>Posts</p>
+                <p>about Us</p>
+                <p>Contact Us</p>
+        </div>
+        <div class="icons">
+            <div><i class="fa-brands fa-square-instagram fa-2x"></i></div>
+            <div><i class="fa-brands fa-facebook fa-2x"></i></div>
+            <div><i class="fa-brands fa-youtube fa-2x"></i></div>
+            <div><i class="fa-brands fa-twitter fa-2x"></i></div>
+        </div>
+    </nav>
+    <div class="main">
+    <div class="text-animate">
+    <h3>Front-End Developer</h3>
+    <span class="animate" style="--i:3;"></span>
+</div>
+</div>
+<script src="https://kit.fontawesome.com/2bc1922da0.js" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
